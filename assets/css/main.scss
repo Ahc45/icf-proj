@@ -22,6 +22,7 @@ body{
 .normal-pad-50{
     padding: 50px 0;
 }
+.hide{ display: none;}
 .topfix     { margin-top: 60px; }
 .relative   {position: relative;}
 .pad-side50{ padding-left:50px;padding-right: 50px; }
@@ -135,8 +136,8 @@ body{
     // min-height: 100vh;
     // padding: 50px 0;
     // min-height: 100vh;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+    padding-top: 0 ;
+    padding-bottom: 0;
 }
 
 //headers
@@ -179,17 +180,19 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     height: auto !important;
-    padding:100px 0;
+    padding:100px 0 !important;
 }
 #section-3{
     background: url('../img/section-3.png');
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 0;
 }
 #section-4{
     background: url('../img/section-4.png');
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 0;
 }
 
 .text-primary{
@@ -248,6 +251,7 @@ body{
     width: 40px;
 }
 .social-icons-wrapper {
+    mix-blend-mode: difference;
     ul{
         list-style-type: none;
         li{
@@ -257,7 +261,7 @@ body{
     color: $primary-color;
     position: fixed;
     bottom: 30px;
-    left: 5px;
+    left: 20px;
 }
 .header-slahed{
     text-align: left;
@@ -510,4 +514,23 @@ nav{
             }
         }
     }}
+}
+
+@media ( max-width: 768px ){
+    nav{ 
+        display: none;
+        .page-nav{
+            display: none;
+        }
+    
+    }
+    .what-we-do-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #section-1, #contact-section, #section-2, #section-3, #section-4{
+        min-height: 100vh;
+        padding: 60px 0 !important;
+    }
+    
 }

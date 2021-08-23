@@ -32,6 +32,10 @@ body {
   padding: 50px 0;
 }
 
+.hide {
+  display: none;
+}
+
 .topfix {
   margin-top: 60px;
 }
@@ -425,8 +429,8 @@ body {
 
 .section {
   position: relative;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .header-1 {
@@ -471,19 +475,21 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: auto !important;
-  padding: 100px 0;
+  padding: 100px 0 !important;
 }
 
 #section-3 {
   background: url("../img/section-3.png");
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 0;
 }
 
 #section-4 {
   background: url("../img/section-4.png");
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 0;
 }
 
 .text-primary {
@@ -558,10 +564,11 @@ body {
 }
 
 .social-icons-wrapper {
+  mix-blend-mode: difference;
   color: #0d507b;
   position: fixed;
   bottom: 30px;
-  left: 5px;
+  left: 20px;
 }
 
 .social-icons-wrapper ul {
@@ -859,5 +866,22 @@ nav .logo-container .page-nav li a {
   text-transform: uppercase;
   color: #0d507b !important;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  nav .page-nav {
+    display: none;
+  }
+  .what-we-do-wrapper {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  #section-1, #contact-section, #section-2, #section-3, #section-4 {
+    min-height: 100vh;
+    padding: 60px 0 !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */
