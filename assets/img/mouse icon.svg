@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31.001" height="46" viewBox="0 0 31.001 46">
+  <g id="mouse_icon" data-name="mouse icon" transform="translate(-783 -804)">
+    <g id="mouse_icon-2" data-name="mouse icon" transform="translate(775.25 804)">
+      <g id="Group_648" data-name="Group 648">
+        <g id="Group_647" data-name="Group 647">
+          <g id="Group_646" data-name="Group 646">
+            <path id="Path_234" data-name="Path 234" d="M23.25,0A15.431,15.431,0,0,0,7.75,15.326V30.675a15.5,15.5,0,0,0,31,0V15.326A15.431,15.431,0,0,0,23.25,0ZM37.028,30.675a13.779,13.779,0,0,1-27.556,0V15.326a13.779,13.779,0,0,1,27.556,0Z"/>
+            <path id="Path_235" data-name="Path 235" d="M23.25,5.111a.856.856,0,0,0-.861.852v7.714a.861.861,0,0,0,1.722,0V5.963A.857.857,0,0,0,23.25,5.111Z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <path id="Color_Overlay" data-name="Color Overlay" d="M783,834.674V819.326a15.5,15.5,0,0,1,31,0v15.349a15.5,15.5,0,0,1-31,0Zm1.723-15.349v15.349a13.779,13.779,0,0,0,27.555,0V819.326a13.779,13.779,0,0,0-27.555,0Zm12.916-1.649v-7.714a.861.861,0,0,1,1.723,0v7.714a.861.861,0,0,1-1.723,0Z" fill="#0d507b" opacity="0.94"/>
+  </g>
+</svg>
