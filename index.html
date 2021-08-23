@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="assets/css/fullpage.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="assets/css/ionicons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
@@ -34,7 +34,17 @@
                 <img src="assets/img/logo.png" alt="" class="img-fluid">
             </div>
             <div class="first-top-nav">
-
+                <ul>
+                    <li><a>Blog </a></li>
+                    <li><a>News & Events </a></li>
+                    <li><a>Careers </a></li>
+                    <li><a>Contact </a></li>
+                    <li>
+                        <div class="form-group search">
+                            <input type="text" placeholder="Search">
+                        </div>
+                    </li>
+                </ul>
             </div>
             <ul class="page-nav">
                 <li><a>company </a></li>
@@ -43,8 +53,41 @@
                 <li><a>Resources</a></li>
             </ul>
         </div>
-        </div>
     </nav>
+    <div id="my-m-nav" class="hide">
+        <div class="wrap">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="nav-mobile-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="assets/img/icflogo.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-8">
+                    <div class="first-top-nav">
+                        <ul>
+                            <li><a>Blog </a></li>
+                            <li><a>News & Events </a></li>
+                            <li><a>Careers </a></li>
+                            <li><a>Contact </a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="page-nav">
+                            <li><a>company </a></li>
+                            <li><a>What we do</a></li>
+                            <li><a>Investors</a></li>
+                            <li><a>Resources</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="fullpage">
         <section class=" section position-relative " id="section-1">
             <div class="container">
@@ -192,12 +235,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-5">
-                        <div class="header-slahed">
+                        <div class="header-slahed top10">
                             <h2 class="header-2 text-white font-weight-normal text-primary"> INVESTORS OVERVIEW</h2>
                         </div>
                     </div>
                     <div class="col-sm-7">
-                        <div class="pull-left">
+                        <div class="pull-left top10">
                             <p>ICF (NASDAQ:ICFI) is a leading provider of professional services and technology-based
                                 solutions to government and commercial clients.</p>
                         </div>
@@ -372,7 +415,7 @@
                                     </g>
                                 </g>
                             </svg>
-                            <div class="hide" id="recent_news_wraper data-wrapper">
+                            <div style="position:absolute" class="data-wrapper hide" id="recent_news_wraper">
                                 <table>
                                     <thead>
                                         <tr>
@@ -389,7 +432,7 @@
                                 </table>
                                 <a href="">VIEW MORE ></a>
                             </div>
-                            <div class="hide" id="stock_info_wraper data-wrapper">
+                            <div style="position:absolute" class="data-wrapper hide" id="stock_info_wraper">
                                 <h4>ICFI (Common Stock)</h4>
                                 <table>
                                     <thead>
@@ -429,10 +472,10 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <small>Data as of 11/12/18 4:00 PM EST</small>
+                                <small>Data as of 11/12/18 4:00 PM EST</small><br>
                                 <a href="">VIEW MORE ></a>
                             </div>
-                            <div class="hide" id="upcomming_events_wraper data-wrapper">
+                            <div style="position:absolute" class="data-wrapper hide" id="upcomming_events_wraper">
                                 <table>
                                     <thead>
                                         <tr>
@@ -450,7 +493,7 @@
                                 </table>
                                 <a href="">VIEW MORE ></a>
                             </div>
-                            <div class="hide" id="web_casts_wraper data-wrapper">
+                            <div style="position:absolute" class=" data-wrapper hide" id="web_casts_wraper">
                                 <table>
                                     <thead>
                                         <tr>
@@ -467,7 +510,7 @@
                                 </table>
                                 <a href="">VIEW MORE ></a>
                             </div>
-                            <div class="hide" id="web_casts_wraper data-wrapper">
+                            <div style="position:absolute" class=" data-wrapper hide" id="selected_fillings_wrapper">
                                 <table>
                                     <thead>
                                         <tr>
@@ -708,7 +751,7 @@
                         </ul>
                     </div>
                     <div class="col-md-3">
-                        <ul class="">
+                        <ul class="footer-icons">
                             <li> <i class="fas fa-envelope"></i> INFO@ICF.COM</li>
                             <li><i class="fas fa-phone-alt"></i> +1.703.934.3000</li>
                             <li><i class="fas fa-fax"></i> +1.703.934.3740</li>

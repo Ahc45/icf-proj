@@ -480,12 +480,137 @@ body{
 
 
 //   nav
-nav{
+body{
+    z-index: 0;
+}
+#my-m-nav{
+    display: none;
+}
+
+div#my-m-nav{
+    background-color:#fff;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top:22px;
+    right: 60px;
+    z-index: 10;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 120;
+    .wrap{
+        width: 80%;
+        margin-top: -10px;
+        padding: 10px;
+        span{
+            display: block;
+            // position: absolute;
+            height: 3px;
+            width: 100%;
+            margin-top: 8px;
+            background: $primary-color;
+            opacity: 1;
+            left: 0;
+           }
+           span:nth-child(1){
+               width: 70%;
+           }
+           span:nth-child(3){
+               width: 50%;
+           }
+           transition: all .8s;
+    }
+  
+}
+div#my-m-nav.open{
+    .wrap{
+        position: relative;
+        span{
+            width: 80%;
+        }
+        span:nth-child(1){
+            transform: rotate(
+                135deg
+                );
+            position: absolute;
+            top:10%;
+            left: 10%;
+        }
+        span:nth-child(2){
+           display: none;
+
+        }
+        span:nth-child(3){
+            position: absolute;
+            top:10%;
+            left: 10%;
+            transform: rotate(
+                -135deg
+                );
+        }
+    }
+}
+.nav-mobile-wrapper{
+    width: 100%;
+    height: 100vh;
+    background: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+    position: fixed;
+    top: 0;
+    transition: all .5s;
+    right: -100%;
+    img{
+        max-width: 80%;
+    }
+    .page-nav{
+        margin-left: 30px;
+        color: #fff;
+        text-transform: uppercase;
+        li{
+
+            margin-top: 35px;
+        }
+        li a{
+            font-size: 30px;
+            font-weight: 800;
+        }
+    }
+    .first-top-nav{
+        right: 0;
+        width: 100%;
+        ul{
+            display: flex;
+        li{
+                color: #f1f1f1;
+                position: relative;
+                margin-left: 10px;
+                padding: 20px;
+            }
+            li:not(:last-child):before{
+                position: absolute;
+                content: '\f363';
+                font-family: "Ionicons";
+                width: fit-content;
+                left: -10px;
+                font-size: 18px;
+                color: #f1f1f1;
+            }
+        }   
+    }
+}
+nav.my-nav{
     background:transparent !important;
     height: auto !important;
     position: fixed;
-    z-index: 100;
+    z-index: 10;
     box-shadow: none;
+    transition: all .8s;
     .logo-container {
     .nav-img-wrapper{
         background: #fff;
@@ -505,17 +630,127 @@ nav{
          li{
              width: 100%;
              text-align: center;
+             padding: 10ox 20px;
                 a{
                 width: 100%;
                 font-size: 18px;
                 text-transform: uppercase;
                 color: #0d507b !important;
                 font-weight: 600;
+                position: relative;
+                }
+                a:hover:after{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    background-color: $primary-color;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        
+        }
+    }
+    .first-top-nav{
+        display: flex;
+        position: absolute;
+        right: 0;
+        width: fit-content;
+        li{
+            color: $primary-color;
+            position: relative;
+        }
+        li:not(:last-child):before{
+            position: absolute;
+            content: '\f363';
+            font-family: "Ionicons";
+            width: fit-content;
+            left: 0;
+            font-size: 18px;
+            color: #29ade0;
+        }
+    }
+}
+.form-group.search{
+   input{
+    border: 1px solid;
+    padding: 0 10px;
+    line-height: 100%;
+
+   }
+   input::placeholder{
+       color: $primary-color;
+       font-weight: 600;
+   }
+}
+.data-wrapper  {
+    background-color: #e6f0fa;
+    padding:.8em 1em;
+    border-radius: 1em;
+    width: fit-content;
+    position: abosolute;
+    top:0;
+    right: 0;
+    table{
+        font-size: 13px;
+        thead{
+            td{
+                margin-left: 15px;
+                font-weight: 600;
+                color: $primary-color;
+                line-height: 15px;
             }
         }
-    }}
+        tbody{
+           tr{
+               td{ 
+                   margin-left: 15px;
+                color: #87ceed;
+                line-height: 15px;
+                font-size: 12px;
+                
+                }
+                td:first-child { color : #000; }
+           }
+        }
+    }
+    a{
+        margin: 15px 0;
+        color: #e884c3;
+        font-size: .8em;
+    }
+    transition: all 3s;
 }
-
+#recent_news_wraper{
+    top: -4px;
+    right: 12%;
+    /* background-blend-mode: overlay; */
+    z-index: 1;
+}
+#stock_info_wraper {
+    left: 2em;
+    h4{
+        font-size: 18px;
+    }
+}
+#upcomming_events_wraper{
+    top: 10em;
+}
+#web_casts_wraper{
+    position: absolute;
+    top: 45vh;
+    right: 5em;
+}
+#selected_fillings_wrapper{
+    top: 90%;
+    right: 46%;
+}
+.footer-icons{
+    li i{
+       margin-right: 15px; 
+    }
+}
 @media ( max-width: 768px ){
     nav{ 
         display: none;
@@ -528,11 +763,11 @@ nav{
         grid-template-columns: repeat(2, 1fr);
     }
 
-    #section-1, #contact-section, #section-2, #section-4 {
+    #section-1, #contact-section, #section-2, #section-4,#section-3 {
         min-height: 100vh;
         padding: 60px 0;
     }
-    #section-3,  #section-5{
+      #section-5{
         padding: 0;
     }
     #section-5{
@@ -545,5 +780,14 @@ nav{
             }
         }
     }
-    
+    #fp-nav.fp-right {
+        right: -14px;
+    }
+    #my-m-nav{
+        display: block;
+    }
+    div#my-m-nav{
+        right: 10px;
+        transform: scale(.8);
+    }
 }
