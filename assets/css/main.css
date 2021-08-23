@@ -879,9 +879,23 @@ nav .logo-container .page-nav li a {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
-  #section-1, #contact-section, #section-2, #section-3, #section-4 {
+  #section-1, #contact-section, #section-2, #section-4 {
     min-height: 100vh;
-    padding: 60px 0 !important;
+    padding: 60px 0;
+  }
+  #section-3, #section-5 {
+    padding: 0;
+  }
+  #section-5 {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+  #section-5 .sec-5-head {
+    padding: 40px 0;
+  }
+  #section-5 .sec-5-head .news-header {
+    position: relative;
   }
 }
 /*# sourceMappingURL=main.css.map */
