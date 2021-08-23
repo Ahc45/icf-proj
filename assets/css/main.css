@@ -1206,5 +1206,15 @@ nav.my-nav .first-top-nav li:not(:last-child):before {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
   }
+  .header-1 {
+    font-size: 3em;
+  }
+  .wwd-item {
+    width: 36vw;
+    padding: 10%;
+  }
+  .header-slahed h2 {
+    line-height: 110%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
